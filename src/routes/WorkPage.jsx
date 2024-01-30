@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import styles from "./WorkPage.module.scss"
+// import styles from "./WorkPage.module.scss"
 import PageTransition from "../UI/PageTransition"
 import { useLocation } from "react-router-dom"
 import { easeInOut, motion } from "framer-motion"
