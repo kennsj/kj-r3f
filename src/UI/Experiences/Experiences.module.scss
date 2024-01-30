@@ -1,0 +1,52 @@
+@import "../_variables";
+
+.experience__section {
+	position: relative;
+	width: $content-width;
+	margin: 0 auto;
+	margin-bottom: 10rem;
+
+	p {
+		font-size: 1rem;
+		width: 25rem;
+		text-align: right;
+	}
+
+	.experience__list {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.5rem 1rem;
+		border-bottom: 1px solid $primary-color-50;
+
+		// outline: 1px solid red;
+
+		.experience__info {
+			span {
+				font-family: "IBM Mono";
+				font-weight: 100;
+				font-size: 1rem;
+
+				&:last-child {
+					font-size: 0.9rem;
+					color: $primary-color-50;
+				}
+			}
+
+			h3 {
+				// font-family: sans-serif;
+				font-size: 2rem;
+				font-weight: bold;
+				margin-block: 0.5rem;
+			}
+		}
+		&:nth-child(4) {
+			margin-bottom: 5rem;
+		}
+		&:nth-child(4),
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}

@@ -1,33 +1,42 @@
-.social__overlay {
-	position: fixed;
-	left: 7.5vw;
-	bottom: 10vh;
-	bottom: 10dvh;
-	display: flex;
-	flex-wrap: wrap;
-	width: 85vw;
-	justify-content: space-between;
-	pointer-events: none;
+@import "../_variables";
 
-	.social {
-		display: flex;
-		flex-direction: column;
-		pointer-events: auto;
+footer {
+	// position: absolute;
+	// bottom: 0;
+	background: $tertiary-color;
+	width: 100%;
+	padding-block: 3rem;
+	color: $color-black;
 
-		img {
-			width: 1.7rem;
-			margin-bottom: 1rem;
+	.footer__wrapper {
+		max-width: 1280px;
+		margin: 0 auto;
+
+		.footer__container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: $content-width;
+			max-width: 1280px;
+			margin: 0 auto;
+
+			span {
+				font-family: "IBM Mono";
+				font-weight: 500;
+			}
+
+			h2,
+			a {
+				font-size: 2.5rem;
+				font-weight: 500;
+				color: $color-black;
+				pointer-events: all;
+			}
+
+			span a {
+				font-size: 1rem;
+				font-weight: 400;
+			}
 		}
-	}
-
-	.music__toggle {
-		// transform: rotate(-90deg);
-		display: flex;
-		align-items: end;
-	}
-
-	.sound {
-		width: 1.7rem;
-		pointer-events: auto;
 	}
 }

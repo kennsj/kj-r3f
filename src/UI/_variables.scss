@@ -1,66 +1,108 @@
 @import "./Breakpoints/breakpoints.scss";
-@import "./fonts.scss";
+@import "../assets/fonts/BAUHAUS/fonts.scss";
+@import "../assets/fonts/TT Hoves Pro Trial/fonts.scss";
 
 $primary-color: #ccb2b2;
 $primary-color-50: #ccb2b27e;
+$primary-color-80: #ccb2b228;
 
 $secondary-color: #c75555;
 $secondary-color-50: #3c1a1a;
 
-$content-width: 70vw;
+$tertiary-color: #74a36d;
+
+$color-black: #111111;
+
+$content-width: 80%;
 $content-margin: 15vw;
+$content-padding: 5vw;
 
 $content-width-mobile: 90vw;
 $content-margin-mobile: 5vw;
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+	// background: red;
+	// filter: invert(50%);
+}
+
 .highlighted {
 	color: $secondary-color;
+	font-weight: 600;
+}
+
+span {
+	font-family: "TT Hoves Pro Trial";
+}
+
+a {
+	font-family: "TT Hoves Pro Trial";
+	text-decoration: none;
+	pointer-events: all;
 }
 
 p {
 	// width: 50%;
 	// margin-top: 1rem;
-	// font-family: "Playfair Display";
+	font-family: "TT Hoves Pro Trial";
+	font-weight: 400;
 	font-size: 1rem;
-	width: 14rem;
+
 	@include media("<tablet") {
 		width: 60%;
 	}
 }
 
 h1 {
+	font-family: "TT Hoves Pro Trial";
 	font-weight: bold;
-	font-size: clamp(1rem, 4vw, 4rem);
+	font-size: clamp(1rem, 10vw, 8rem);
 }
 
 h2 {
-	font-weight: bold;
-	font-size: clamp(0.5rem, 1vw, 1rem);
-	text-transform: uppercase;
-	margin-bottom: clamp(0.5rem, 1vw, 1rem);
-}
-
-h3 {
-	color: $secondary-color;
-	font-size: 5rem;
-	font-weight: 800;
-	margin-left: -3rem;
+	// color: $secondary-color;
+	font-family: "TT Hoves Pro Trial";
+	font-size: 4rem;
+	font-weight: 100;
 
 	@include media("<tablet") {
 		font-size: 2rem;
-		order: 2;
-		margin: 0 0 1rem 0;
 	}
 }
 
+h3 {
+	font-family: "TT Hoves Pro Trial";
+	font-weight: 400;
+	// font-size: clamp(0.5rem, 2vw, 3rem);
+	font-size: 1.5rem;
+}
+
 h4 {
-	font-family: "Playfair Display";
+	margin-bottom: 1rem;
+	font-family: "IBM Mono";
 	font-size: 1rem;
-	font-weight: normal;
-	margin-bottom: 0.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $primary-color-50;
+
 	@include media("<tablet") {
 		font-size: 0.7rem;
-		margin-bottom: 0.5rem;
-		order: 1;
 	}
 }
+
+main {
+	max-width: 1280px;
+}
+
+// footer {
+// 	width: 100%;
+// 	max-width: 1280px;
+// 	margin: 0 auto;
+// }

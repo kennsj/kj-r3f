@@ -1,55 +1,31 @@
 @import "../_variables";
 
 .home__header {
-	position: relative;
-	left: $content-margin;
-	width: $content-width;
-	height: 100vh;
-	height: 100dvh;
-	display: grid;
+	// pointer-events: all;
+	display: flex;
 	align-items: center;
+	height: 100dvh;
+	max-width: 1280px;
+	margin: 0 auto;
 
-	h1 {
-		font-size: 9rem;
-		@include media(">=phone", "<tablet") {
-			font-size: clamp(1rem, 1vw + 5rem, 5rem);
-		}
-	}
-}
-
-.intro__section {
-	position: relative;
-	left: $content-margin;
-	width: $content-width;
-	@include media(">=phone", "<tablet") {
-		left: $content-margin-mobile;
-		width: $content-width-mobile;
-	}
-
-	h1 {
-		width: 80%;
-		@include media(">=phone", "<tablet") {
-			left: $content-margin-mobile;
-			width: $content-width-mobile;
-		}
-	}
-
-	.header-text__wrapper {
+	.intro {
 		display: flex;
-		flex-direction: column;
+		// align-items: center;
+		justify-content: center;
+		width: $content-width;
+		margin: 0 auto;
 
-		* {
-			overflow: hidden;
+		img {
+			width: 8rem;
+			mix-blend-mode: screen;
+			opacity: 0.3;
 		}
 
-		.header__words {
-			// overflow: hidden;
-
-			span {
-				// opacity: 0;
-				display: inline-block;
-				overflow: hidden;
-			}
+		h1 {
+			font-family: "Playfair  Display";
+			font-weight: 100;
+			padding: 1rem 0 0 1rem;
+			font-size: 1.5rem;
 		}
 	}
 }

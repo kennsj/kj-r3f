@@ -1,0 +1,18 @@
+@import "../variables";
+
+.intro__section {
+	width: $content-width;
+	margin: 0 auto 10rem auto;
+
+	#target,
+	h2,
+	b {
+		font-family: "Playfair Display";
+		color: transparent;
+		background: $primary-color-80;
+		background-position-x: 100%;
+		background-clip: text;
+		-webkit-background-clip: text;
+		font-kerning: none;
+	}
+}

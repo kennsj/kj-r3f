@@ -23,7 +23,7 @@ export default function LightSource() {
 		easing.dampC(light5.current.color, colors[0], 0.05, delta)
 
 		if (isMobile) {
-			light.current.position.set(-2, -Math.sin(state.clock.elapsedTime), 1)
+			light.current.position.set(-2, Math.sin(state.clock.elapsedTime), 1)
 		} else {
 			easing.damp3(
 				light.current.position,

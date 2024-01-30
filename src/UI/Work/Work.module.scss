@@ -2,21 +2,38 @@
 
 .work__container {
 	position: relative;
-	// width: $content-width;
-	// width: 100%;
-	width: 60vw;
+	// width: $content-width - 15vw;
+	margin: 0 auto;
 	margin-bottom: 15rem;
+	overflow: hidden;
+
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(#ffffff00, #11111175);
+		// border-radius: 1rem;
+		width: 100%;
+		height: 100%;
+		content: "";
+	}
+
+	&:hover > a img {
+		// scale: (1.1);
+		// opacity: 0;
+		filter: grayscale(0);
+		transition: filter 0.4s ease-in;
+	}
+
 	@include media("<tablet") {
 		width: 100%;
 		margin-bottom: 5rem;
 	}
 
 	a {
-		display: flex;
-		// flex-direction: row;
-		justify-content: space-between;
-		text-transform: none;
 		text-decoration: transparent;
+		width: 100%;
+		height: 100%;
 
 		&:hover span::before {
 			transform: scale(1.5);
@@ -26,96 +43,125 @@
 			transform: translateX(5px);
 			transition: transform 0.3s ease-in;
 		}
+
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+
+			.image__overlay {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				// background: #000;
+				z-index: 50;
+			}
+
+			img {
+				position: relative;
+				filter: grayscale(1);
+				z-index: 0;
+
+				transition: filter 0.4s ease-in;
+
+				@include media("<desktop") {
+				}
+
+				@include media("<tablet") {
+					// width: 100%;
+					// height: 100%;
+					// object-fit: contain;
+				}
+			}
+		}
 	}
 
-	.work__card {
-		position: relative;
+	.card {
+		position: absolute;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: 30rem;
-		color: $primary-color;
-
+		align-items: center;
+		width: 100%;
+		bottom: 3.5rem;
+		border-radius: 50%;
 		z-index: 1;
 
+		font-family: "TT Hoves Pro Trial";
+		font-size: 1rem;
+		font-weight: bold;
+		color: $primary-color;
+
 		@include media("<tablet") {
-			width: 100%;
+			// width: 100%;
 		}
 
-		.work__subtitle {
-			width: fit-content;
-			// border: 1px solid $primary-color-50;
-			// border-radius: 3rem;
-			// padding: 0.5rem 1rem;
-		}
+		.card__bottom {
+			position: relative;
+			width: 90%;
+			left: 5%;
 
-		.work__info {
-			// width: 20rem;
-			margin-top: 2rem;
-			display: flex;
-		}
-
-		.work__info {
-			@include media("<tablet") {
-				// position: absolute;
-				// bottom: 0;
-				// right: 0;
-				order: 4;
-			}
-		}
-
-		span {
-			margin-top: 2rem;
-			margin-left: 0.7rem;
-
-			&::before {
-				position: absolute;
-				width: 25px;
-				height: 25px;
-				background: $secondary-color-50;
-				background: $secondary-color;
-				margin-left: -0.7rem;
-				margin-top: -5px;
-				border-radius: 50%;
-				z-index: -1;
-				content: "";
-				transition: transform 0.3s ease-out;
-			}
-			&::after {
-				position: absolute;
-				width: 20px;
-				height: 20px;
-				margin: 2px 0 0 0.7rem;
-				background-image: url("./img/icons/arrow-right.png");
-				background-size: contain;
-				background-repeat: no-repeat;
-				content: "";
-				transition: 0.3s ease-out;
-			}
-			@include media("<tablet") {
-				position: absolute;
-				bottom: 5%;
-				right: 10%;
-				order: 5;
-			}
-		}
-		img {
-			position: absolute;
-			z-index: -1;
-			width: 60vw;
-			width: 50rem;
-			left: 15vw;
-
-			@include media("<desktop") {
-				width: 50vw;
+			span {
+				color: $tertiary-color;
+				font-size: 2rem;
 			}
 
-			@include media("<tablet") {
+			li {
 				position: relative;
-				// left: $content-margin-mobile;
-				left: -3.5vw;
-				width: 95vw;
-				order: 2;
+				list-style: none;
+				display: inline;
+				margin-inline: 1rem;
+				font-family: "IBM Mono";
+				font-weight: 400;
+				font-size: 1rem;
+				text-transform: uppercase;
+
+				&:first-child {
+					margin: 0;
+				}
+
+				&::before {
+					position: absolute;
+					top: 6px;
+					// content: "";
+					margin-inline: 2rem;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background: $primary-color;
+				}
+			}
+		}
+
+		.card__explore {
+			position: relative;
+			right: 0;
+			top: 0;
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			background: $tertiary-color;
+
+			span {
+				position: relative;
+				display: block;
+				width: 15px;
+				height: 1px;
+				background: $primary-color;
+				&::after {
+					position: relative;
+					top: -4px;
+					left: 6px;
+					display: block;
+					width: 8px;
+					height: 8px;
+					border-top: 1px solid $primary-color;
+					border-right: 1px solid $primary-color;
+					transform: rotate(45deg);
+					content: "";
+				}
 			}
 		}
 	}

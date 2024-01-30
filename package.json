@@ -12,10 +12,12 @@
 		"preview": "vite preview --host"
 	},
 	"dependencies": {
+		"@14islands/r3f-scroll-rig": "^8.11.11",
 		"@cyriacbr/react-split-text": "^1.0.0",
 		"@react-three/drei": "^9.65.2",
 		"@react-three/fiber": "^8.12.0",
 		"@react-three/postprocessing": "^2.7.1",
+		"@tanstack/react-router": "^0.0.1-beta.194",
 		"framer-motion": "^10.12.4",
 		"gsap": "^3.11.5",
 		"maath": "^0.5.3",
@@ -25,7 +27,7 @@
 		"react-device-detect": "^2.2.3",
 		"react-dom": "^18.2.0",
 		"react-intersection-observer": "^9.4.3",
-		"react-router-dom": "^6.11.1",
+		"react-router-dom": "^6.16.0",
 		"sass": "^1.62.0",
 		"split-type": "^0.3.3",
 		"three": "^0.151.3",

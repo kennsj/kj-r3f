@@ -2,23 +2,16 @@
 
 main {
 	position: relative;
-	left: $content-margin;
 	width: $content-width;
+	margin: 0 auto;
 
 	.work__section {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		margin-top: 10rem;
-		// gap: 10rem;
 
-		// :nth-child(odd) {
-		// 	gap: 15rem;
-		// }
-
-		// @include media("<desktop") {
-		// 	grid-template-columns: repeat(1, 1fr);
-		// 	gap: 5rem;
-		// }
+		a {
+			pointer-events: all;
+		}
 	}
 
 	@include media("<tablet") {
